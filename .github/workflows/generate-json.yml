@@ -38,7 +38,7 @@ jobs:
             return {
               id: name,
               name: name,
-              url: `https://cdn.jsdelivr.net/gh/${repoOwner}/${repoName}@main/icons/${file}`
+              url: `https://raw.githubusercontent.com/${repoOwner}/${repoName}/main/icons/${file}`
             };
           });
 
@@ -56,5 +56,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add my-icon.json
-          git commit -m "auto: update icon json manifest" || exit 0
+          git commit -m "auto: update icon json manifest with raw links" || exit 0
           git push
