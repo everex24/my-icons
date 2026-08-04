@@ -1,0 +1,16 @@
+{
+  "name": "My Custom Icons",
+  "version": "1.0.0",
+  "icons": [
+    {
+      "id": "mpv-logo",
+      "name": "MPV Logo",
+      "url": "https://cdn.jsdelivr.net/gh/everex24/my-icons@main/icons/MPVlogo.png"
+    },
+    {
+      "id": "mixz",
+      "name": "Mixz",
+      "url": "https://cdn.jsdelivr.net/gh/everex24/my-icons@main/icons/mixz.png"
+    }
+  ]
+}
