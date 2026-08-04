@@ -1,21 +1,26 @@
 {
-  "updated_at": "2026-08-04T06:37:40.948Z",
-  "total": 3,
+  "updated_at": "2026-08-04T08:52:38.549Z",
+  "total": 4,
   "icons": [
     {
       "id": "MIXemby",
       "name": "MIXemby",
-      "url": "https://cdn.jsdelivr.net/gh/everex24/my-icons@main/icons/MIXemby.png"
+      "url": "https://raw.githubusercontent.com/everex24/my-icons/main/icons/MIXemby.png"
     },
     {
       "id": "MPVlogo",
       "name": "MPVlogo",
-      "url": "https://cdn.jsdelivr.net/gh/everex24/my-icons@main/icons/MPVlogo.png"
+      "url": "https://raw.githubusercontent.com/everex24/my-icons/main/icons/MPVlogo.png"
+    },
+    {
+      "id": "catlogo-back",
+      "name": "catlogo-back",
+      "url": "https://raw.githubusercontent.com/everex24/my-icons/main/icons/catlogo-back.png"
     },
     {
       "id": "mixz",
       "name": "mixz",
-      "url": "https://cdn.jsdelivr.net/gh/everex24/my-icons@main/icons/mixz.png"
+      "url": "https://raw.githubusercontent.com/everex24/my-icons/main/icons/mixz.png"
     }
   ]
 }
