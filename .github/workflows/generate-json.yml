@@ -1,0 +1,60 @@
+name: Generate Icon JSON
+
+on:
+  push:
+    paths:
+      - 'icons/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Generate JSON File
+        run: |
+          node -e '
+          const fs = require("fs");
+          const path = require("path");
+          
+          const iconDir = "./icons";
+          if (!fs.existsSync(iconDir)) {
+            fs.mkdirSync(iconDir);
+          }
+
+          const repoOwner = process.env.GITHUB_REPOSITORY_OWNER;
+          const repoName = process.env.GITHUB_REPOSITORY.split("/")[1];
+          
+          const files = fs.readdirSync(iconDir);
+          const icons = files.filter(file => /\.(png|jpg|jpeg|svg|webp)$/i.test(file)).map(file => {
+            const name = path.parse(file).name;
+            return {
+              id: name,
+              name: name,
+              url: `https://cdn.jsdelivr.net/gh/${repoOwner}/${repoName}@main/icons/${file}`
+            };
+          });
+
+          const jsonContent = {
+            updated_at: new Date().toISOString(),
+            total: icons.length,
+            icons: icons
+          };
+
+          fs.writeFileSync("./my-icon.json", JSON.stringify(jsonContent, null, 2));
+          '
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add my-icon.json
+          git commit -m "auto: update icon json manifest" || exit 0
+          git push
