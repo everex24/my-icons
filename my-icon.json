@@ -1,15 +1,20 @@
 {
-  "name": "My Custom Icons",
-  "version": "1.0.0",
+  "updated_at": "2026-08-04T06:13:40.791Z",
+  "total": 3,
   "icons": [
     {
-      "id": "mpv-logo",
-      "name": "MPV Logo",
+      "id": "MIXemby",
+      "name": "MIXemby",
+      "url": "https://cdn.jsdelivr.net/gh/everex24/my-icons@main/icons/MIXemby.png"
+    },
+    {
+      "id": "MPVlogo",
+      "name": "MPVlogo",
       "url": "https://cdn.jsdelivr.net/gh/everex24/my-icons@main/icons/MPVlogo.png"
     },
     {
       "id": "mixz",
-      "name": "Mixz",
+      "name": "mixz",
       "url": "https://cdn.jsdelivr.net/gh/everex24/my-icons@main/icons/mixz.png"
     }
   ]
